@@ -7,8 +7,10 @@
   - [Qiita記事 一から始める機械学習（機械学習概要）](https://qiita.com/taki_tflare/items/42a40119d3d8e622edd2)
     - 読み物。機械学習のおおざっぱな概要がつかめる。
   - [Qiita記事 10分で分かるAIの歴史](https://qiita.com/cr-fun/items/adf0f7f405eeebc42a50)
-  - [Wikipedia 人工知能の歴史](https://ja.wikipedia.org/wiki/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AE%E6%AD%B4%E5%8F%B2)
-    - 長い。読まなくていい。
+
+## 機械学習入門
+  - [東工大 機械学習帳](https://chokkan.github.io/mlnote/index.html)
+    - Jupyter Notebook形式で読める、"動く"機械学習帳。機械学習の基礎となる単回帰・重回帰から始まり、理論的な説明と実際のデータを使った確認が同時になされているため体系的に勉強できる。
 
 ## Neural Network関連
 とりあえず、以下のとてもわかり易い一連のQiita記事を全て読みましょう！
@@ -53,6 +55,10 @@ T.B.D.
   - [Qiita記事 深層学習界の大前提Transformerの論文解説！](https://qiita.com/omiita/items/07e69aef6c156d23c538)
   - [Qiita記事 作って理解する Transformer / Attention](https://qiita.com/halhorn/items/c91497522be27bde17ce)
 
+### GNN (Graph Neural Network)関連
+ - [Math Behind Graph Neural Networks](https://rish-16.github.io/posts/gnn-math/)
+   - GNNのtutorial。Twitterで発見。元ツイは[コレ](https://twitter.com/rishabh16_/status/1505600925926260739)
+
 ## 教師なし学習(特にNeural以外の手法)
 T.B.D.
 
@@ -62,7 +68,7 @@ T.B.D.
   - [Qiita記事 ゼロからDeepまで学ぶ強化学習](https://qiita.com/icoxfog417/items/242439ecd1a477ece312)
 T.B.D.
 
-# Advanced
+## Advanced
   - [Qiita記事 【まとめ】ディープラーニングを使った異常検知](https://qiita.com/shinmura0/items/06d81c72601c7578c6d3)
     - [@shinmura0](https://twitter.com/shinmura0)さんによる異常検知まとめ。
   - [Qiita記事 物体検出についての歴史まとめ(1)](https://qiita.com/mshinoda88/items/9770ee671ea27f2c81a9)
@@ -78,6 +84,13 @@ T.B.D.
   - [Qiita記事 adversarial validationを実装してみた](https://qiita.com/shota-imazeki/items/6f48c78edf0ce3b316e1#:~:text=adversarial%20validation%E3%81%A8%E3%81%AF%E3%80%81train,%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A7%E3%81%82%E3%82%8B%E3%80%82)
   - [Kaggleで役立つAdversarial Validationとは](https://www.acceluniverse.com/blog/developers/2020/01/kaggleadversarial-validation.html)
 
+# 数学系
+## 数理最適化
+  - [東工大 水野研究室 学習・研究用テキスト(最適化,線形計画法,内点法,数理計画法)](http://www.me.titech.ac.jp/~mizu_lab/text.html)
+    - 線形計画法、非線型計画法、内点法などをテーマとした講義pdfが配布されている。
+  - [『パターン認識と機械学習の学習 普及版』](herumi.github.io/prml/)
+    - PRMLの数式理解に必要な数学を丁寧にまとめたpdf
+
 
 # Others
   - [機械学習他】【長期】Qiitaの今読んでおくべき記事１００選【毎週自動更新】](https://qiita.com/j5c8k6m8/items/481b221277d9355934a0) 
@@ -85,8 +98,8 @@ T.B.D.
   - [Qiita記事 誤差逆伝播法のノート](https://qiita.com/Ugo-Nama/items/04814a13c9ea84978a4c)
     - 誤差逆伝播(Backpropagation)について詳細を忘れたときに読む記事。
   - [Qiita記事 機械学習エンジニアに爆速でなるための教材集](https://qiita.com/KangsooKim/items/8d987a7089297068477b)
-
-
+  - [東大 2019年度講義 数理手法Ⅶ](https://ocwx.ocw.u-tokyo.ac.jp/course_11416/)
+    - 古典的な時系列解析について講義動画が体系的にまとめられている。
 
 # 書籍など
   - [実践Data Scienceシリーズ PythonではじめるKaggleスタートブック](https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5Data-Science%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-Python%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8BKaggle%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%83%96%E3%83%83%E3%82%AF-KS%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E5%B0%82%E9%96%80%E6%9B%B8-%E7%A5%A5%E5%A4%AA%E9%83%8E/dp/4065190061)
@@ -96,11 +109,19 @@ T.B.D.
   - [機械学習スタートアップシリーズ ベイズ推論による機械学習入門](https://www.amazon.co.jp/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E3%83%99%E3%82%A4%E3%82%BA%E6%8E%A8%E8%AB%96%E3%81%AB%E3%82%88%E3%82%8B%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E5%85%A5%E9%96%80-KS%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E5%B0%82%E9%96%80%E6%9B%B8-%E9%A0%88%E5%B1%B1-%E6%95%A6%E5%BF%97/dp/4061538322/ref=sr_1_3?adgrpid=109848114171&gclid=Cj0KCQjwjN-SBhCkARIsACsrBz5qQu5grukqCIXSz_qRb7j2cD9esDBhjQlh9uDAyN6lSRY24Dgwe28aAtkFEALw_wcB&hvadid=448041872863&hvdev=c&hvlocphy=1009332&hvnetw=g&hvqmt=e&hvrand=2011472433856026341&hvtargid=kwd-376617406059&hydadcr=27266_11561146&jp-ad-ap=0&keywords=%E3%81%93%E3%82%8C%E3%81%AA%E3%82%89%E3%82%8F%E3%81%8B%E3%82%8B%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92%E5%85%A5%E9%96%80&qid=1649951171&sr=8-3)
     - ベイス推定の本。5章以降が難しかったので放置。
   - [Kaggleで勝つデータ分析の技術](https://www.amazon.co.jp/Kaggle%E3%81%A7%E5%8B%9D%E3%81%A4%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E6%8A%80%E8%A1%93-%E9%96%80%E8%84%87-%E5%A4%A7%E8%BC%94/dp/4297108437/ref=sr_1_1_sspa?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=IT2I90OL924B&keywords=kaggle&qid=1649951366&sprefix=kaggle%E6%9C%AC%2Caps%2C191&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyS09PM0lWNU00RjRRJmVuY3J5cHRlZElkPUEwMjQ4Mjc1WFUyRkVCSElDMEhLJmVuY3J5cHRlZEFkSWQ9QTFJRkQ0UFo2VVRDOUYmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl)
-    - 必読本
-  
-  T.B.D.
+    - 必読本だが余り読めてない。。
 
-## データ分析コンペサイト
+# 動画
+  - [[Youtube] Neural Network Console](https://www.youtube.com/c/NeuralNetworkConsole)
+    - Sonyによる深層学習をテーマとしたレクチャー動画集。それぞれの動画は長くても10分程度と短いので見やすい。
+  - [[Youtube] AIcia Solid Project](https://www.youtube.com/channel/UC2lJYodMaAfFeFQrGUwhlaQ)
+    - VTuberによって機械学習や数学をテーマに数多くの動画が公開されているYoutubeチャネル。個人的にはベイズ統計シリーズが分かりやすかった。
+  - [[Youtube] nnabla ディープラーニングチャンネル](https://www.youtube.com/channel/UCOELxR-yS2EbjBxQ0hx4yBw)
+    - nnablaによるYoutubeチャネルであり、学会聴講まとめや最新論文の解説などの動画がまとめられている。かなりAdvancedな内容だがとても勉強になる。特に[【Deep Learning研修（発展）】系列データモデリング (RNN / LSTM / Transformer)　第７回「Transformer」](https://www.youtube.com/watch?v=oVEkXMu4e-s)がオススメ
+  - [[Youtube] How to get meaning from text with language model BERT | AI Explained](https://www.youtube.com/watch?v=-9vVhYEXeyQ)
+    - Transformerの概要について3Dアニメーションで説明している。
+
+# データ分析コンペサイト
   - [kaggle](https://www.kaggle.com/)
     - 運営元：Google （米国）
     - 世界最大規模のデータ分析コンペティションプラットフォームである
@@ -122,3 +143,21 @@ T.B.D.
   - [Analytics Vidhya](https://datahack.analyticsvidhya.com/)
     - 運営元：Analytics Vidhya（インド）
     - 目立った賞金はなく、自分の技術力を試す・学習する・純粋に楽しむためのプラットフォームである
+
+# 気になった論文
+  - [Deep Neural Networks and Tabular Data: A Survey](https://arxiv.org/pdf/2110.01889.pdf)
+    - XGBoost is All You Need.
+  - [State-of-the-Art in the Architecture, Methods and Applications of StyleGAN](https://arxiv.org/abs/2202.14020)
+    - StyleGANの基礎、問題点、応用を幅広く説明している論文。StyleGAN の潜在空間は非常に強力で、応用すれば年齢や髪型、ポーズなどをリアルに変更したり、有名人や魔法使いなどに変身したりなどの編集ができたり、微調整することで segmentation などのタスクをこなせたりする。
+  - [A Tutorial on Distance Metric Learning: Mathematical Foundations, Algorithms, Experimental Analysis, Prospects and Challenges (with Appendices on Mathematical Background and Detailed Algorithms Explanation)](https://arxiv.org/abs/1812.05944)
+    - metric learningに関するチュートリアル。
+
+# 学会資料
+  - [2022.2.11 第6回 統計・機械学習若手シンポジウム チュートリアル講演 Vision and LanguageとTransformers](https://speakerdeck.com/sei88888/2022-dot-2-11-di-6hui-tong-ji-ji-jie-xue-xi-ruo-shou-sinpoziumu-tiyutoriarujiang-yan-vision-and-languagetotransformers)
+    - Twitterで発見。元ツイは[コレ](https://twitter.com/sei_shinagawa/status/1492682815007502336)
+
+# 気になるライブラリ
+  - [NeuralForecast](https://nixtla.github.io/neuralforecast/)
+    - Twitterで発見。元ツイは[コレ](https://twitter.com/Rami_Krispin/status/1505898362519777287)
+  - [trevismd/statannotations](https://github.com/trevismd/statannotations)
+    - seabornに統計的有意性の注釈を付与するライブラリ
