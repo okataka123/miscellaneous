@@ -15,16 +15,16 @@
 ## Neural Network関連
 とりあえず、以下のとてもわかり易い一連のQiita記事を全て読みましょう！
   - [Qiita記事 深層学習入門 \~基礎編\~](https://qiita.com/kuroitu/items/221e8c477ffdd0774b6b)
-  - [Qiita記事 深層学習入門 ~コーディング準備編~](https://qiita.com/kuroitu/items/884c62c48c2daa3def08)
-  - [Qiita記事 深層学習入門 ~順伝播編~](https://qiita.com/kuroitu/items/d22c8750e34d5d75fb6c)
-  - [Qiita記事 深層学習入門 ~逆伝播編~](https://qiita.com/kuroitu/items/ea6ed8f614e65ec44976)
-  - [Qiita記事 深層学習入門 ~学習則編~](https://qiita.com/kuroitu/items/ab5ad4ac716ae7a04891)
-  - [Qiita記事 深層学習入門 ~ローカライズと損失関数編~](https://qiita.com/kuroitu/items/a6725ac0139d8eeb1e19)
-  - [Qiita記事 深層学習入門 ~関数近似編~](https://qiita.com/kuroitu/items/4a8badcf7d3139d9ec7b)
-  - [Qiita記事 深層学習入門 ~畳み込みとプーリング編~](https://qiita.com/kuroitu/items/48bf6bc42e4dfee52cde)
-  - [Qiita記事 深層学習入門 ~CNN実験編~](https://qiita.com/kuroitu/items/d4716e754594a29b059d)
-  - [Qiita記事 深層学習外伝 ~GPUプログラミング編~](https://qiita.com/kuroitu/items/2618c598f46d6ab3889c)
-  - [Qiita記事 深層学習入門 ~ドロップアウト編~](https://qiita.com/kuroitu/items/d1bed8c216950d87be74)
+  - [Qiita記事 深層学習入門 \~コーディング準備編\~](https://qiita.com/kuroitu/items/884c62c48c2daa3def08)
+  - [Qiita記事 深層学習入門 \~順伝播編\~](https://qiita.com/kuroitu/items/d22c8750e34d5d75fb6c)
+  - [Qiita記事 深層学習入門 \~逆伝播編\~](https://qiita.com/kuroitu/items/ea6ed8f614e65ec44976)
+  - [Qiita記事 深層学習入門 \~学習則編\~](https://qiita.com/kuroitu/items/ab5ad4ac716ae7a04891)
+  - [Qiita記事 深層学習入門 \~ローカライズと損失関数編\~](https://qiita.com/kuroitu/items/a6725ac0139d8eeb1e19)
+  - [Qiita記事 深層学習入門 \~関数近似編\~](https://qiita.com/kuroitu/items/4a8badcf7d3139d9ec7b)
+  - [Qiita記事 深層学習入門 \~畳み込みとプーリング編\~](https://qiita.com/kuroitu/items/48bf6bc42e4dfee52cde)
+  - [Qiita記事 深層学習入門 \~CNN実験編\~](https://qiita.com/kuroitu/items/d4716e754594a29b059d)
+  - [Qiita記事 深層学習外伝 \~GPUプログラミング編\~](https://qiita.com/kuroitu/items/2618c598f46d6ab3889c)
+  - [Qiita記事 深層学習入門 \~ドロップアウト編\~](https://qiita.com/kuroitu/items/d1bed8c216950d87be74)
   - [Qiita記事 活性化関数一覧 (2020)](https://qiita.com/kuroitu/items/73cd401afd463a78115a)
   - [Qiita記事 勾配降下法一覧 (2020)](https://qiita.com/kuroitu/items/36a58b37690d570dc618)
   - [Qiita記事 見てわかる！最適化手法の比較 (2020)](https://qiita.com/kuroitu/items/6695e0c79e888543e150)
@@ -77,7 +77,7 @@ T.B.D.
     - metric learningについてまとまっている。特にArcFaceはしっかり抑えておく。
   - [学習する天然ニューラルネット Confident Learning -そのラベルは正しいか？](https://aotamasaki.hatenablog.com/entry/confident_learning)
     - 世の中の教師ラベルはだいたいnoisy.　そいういうときはどうすればいいか？という話。
-  - [Noisy label 対抗記 ~Cassava Leaf Disease Classification~ / Diary against the noisy label](https://speakerdeck.com/sansandsoc/diary-against-the-noisy-label)
+  - [Noisy label 対抗記 \~Cassava Leaf Disease Classification\~ / Diary against the noisy label](https://speakerdeck.com/sansandsoc/diary-against-the-noisy-label)
     - これもnoisy labelの話。
   - [u++の防備録 Adversarial Validationを用いた特徴量選択](https://upura.hatenablog.com/entry/2019/10/27/211137)
     - trainデータとtestデータで分布が大きく大きく異なるときはどうすればいいか？その一つの方法が"Adversarial Varidation"
