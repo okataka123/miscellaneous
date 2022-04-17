@@ -10,11 +10,11 @@
 
 ## 機械学習入門
   - [東工大 機械学習帳](https://chokkan.github.io/mlnote/index.html)
-    - Jupyter Notebook形式で読める、"動く"機械学習帳。機械学習の基礎となる単回帰・重回帰から始まり、理論的な説明と実際のデータを使った確認が同時になされているため体系的に勉強できる。
+    - Jupyter Notebook形式で読める、"動く"機械学習帳。機械学習の基礎となる単回帰・重回帰から始まり、理論的な説明と実際のデータを使った確認が同時になされているため、体系的に勉強することができる。（ただし、誤差逆伝播の理論的説明が少ないため、その後の自動微分の話が少し分かりにくい？）
 
 ## Neural Network関連
 とりあえず、以下のとてもわかり易い一連のQiita記事を全て読みましょう！
-  - [Qiita記事 深層学習入門 ~基礎編~](https://qiita.com/kuroitu/items/221e8c477ffdd0774b6b)
+  - [Qiita記事 深層学習入門 \~基礎編\~](https://qiita.com/kuroitu/items/221e8c477ffdd0774b6b)
   - [Qiita記事 深層学習入門 ~コーディング準備編~](https://qiita.com/kuroitu/items/884c62c48c2daa3def08)
   - [Qiita記事 深層学習入門 ~順伝播編~](https://qiita.com/kuroitu/items/d22c8750e34d5d75fb6c)
   - [Qiita記事 深層学習入門 ~逆伝播編~](https://qiita.com/kuroitu/items/ea6ed8f614e65ec44976)
@@ -84,15 +84,15 @@ T.B.D.
   - [Qiita記事 adversarial validationを実装してみた](https://qiita.com/shota-imazeki/items/6f48c78edf0ce3b316e1#:~:text=adversarial%20validation%E3%81%A8%E3%81%AF%E3%80%81train,%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%A7%E3%81%82%E3%82%8B%E3%80%82)
   - [Kaggleで役立つAdversarial Validationとは](https://www.acceluniverse.com/blog/developers/2020/01/kaggleadversarial-validation.html)
 
-# 数学系
-## 数理最適化
+## 数学系
+### 数理最適化
   - [東工大 水野研究室 学習・研究用テキスト(最適化,線形計画法,内点法,数理計画法)](http://www.me.titech.ac.jp/~mizu_lab/text.html)
     - 線形計画法、非線型計画法、内点法などをテーマとした講義pdfが配布されている。
   - [『パターン認識と機械学習の学習 普及版』](herumi.github.io/prml/)
     - PRMLの数式理解に必要な数学を丁寧にまとめたpdf
 
 
-# Others
+## Others
   - [機械学習他】【長期】Qiitaの今読んでおくべき記事１００選【毎週自動更新】](https://qiita.com/j5c8k6m8/items/481b221277d9355934a0) 
     - このメモに挙げているURLたちも、いくつかはココで整理されているものを参考にした。
   - [Qiita記事 誤差逆伝播法のノート](https://qiita.com/Ugo-Nama/items/04814a13c9ea84978a4c)
@@ -101,7 +101,7 @@ T.B.D.
   - [東大 2019年度講義 数理手法Ⅶ](https://ocwx.ocw.u-tokyo.ac.jp/course_11416/)
     - 古典的な時系列解析について講義動画が体系的にまとめられている。
 
-# 書籍など
+## 書籍など
   - [実践Data Scienceシリーズ PythonではじめるKaggleスタートブック](https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5Data-Science%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-Python%E3%81%A7%E3%81%AF%E3%81%98%E3%82%81%E3%82%8BKaggle%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%83%96%E3%83%83%E3%82%AF-KS%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E5%B0%82%E9%96%80%E6%9B%B8-%E7%A5%A5%E5%A4%AA%E9%83%8E/dp/4065190061)
     - upuraさんとカレーさんの本
   - [機械学習スタートアップシリーズ これならわかる深層学習入門](https://www.amazon.co.jp/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88%E3%82%A2%E3%83%83%E3%83%97%E3%82%B7%E3%83%AA%E3%83%BC%E3%82%BA-%E3%81%93%E3%82%8C%E3%81%AA%E3%82%89%E3%82%8F%E3%81%8B%E3%82%8B%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92%E5%85%A5%E9%96%80-KS%E6%83%85%E5%A0%B1%E7%A7%91%E5%AD%A6%E5%B0%82%E9%96%80%E6%9B%B8-%E7%80%A7-%E9%9B%85%E4%BA%BA/dp/4061538284/ref=sr_1_6?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3FBF5SFUM1SU7&keywords=%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92&qid=1649951148&s=books&sprefix=%E6%B7%B1%E5%B1%A4%E5%AD%A6%E7%BF%92%2Cstripbooks%2C251&sr=1-6)
@@ -111,7 +111,7 @@ T.B.D.
   - [Kaggleで勝つデータ分析の技術](https://www.amazon.co.jp/Kaggle%E3%81%A7%E5%8B%9D%E3%81%A4%E3%83%87%E3%83%BC%E3%82%BF%E5%88%86%E6%9E%90%E3%81%AE%E6%8A%80%E8%A1%93-%E9%96%80%E8%84%87-%E5%A4%A7%E8%BC%94/dp/4297108437/ref=sr_1_1_sspa?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=IT2I90OL924B&keywords=kaggle&qid=1649951366&sprefix=kaggle%E6%9C%AC%2Caps%2C191&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyS09PM0lWNU00RjRRJmVuY3J5cHRlZElkPUEwMjQ4Mjc1WFUyRkVCSElDMEhLJmVuY3J5cHRlZEFkSWQ9QTFJRkQ0UFo2VVRDOUYmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl)
     - 必読本だが余り読めてない。。
 
-# 動画
+## 動画
   - [[Youtube] Neural Network Console](https://www.youtube.com/c/NeuralNetworkConsole)
     - Sonyによる深層学習をテーマとしたレクチャー動画集。それぞれの動画は長くても10分程度と短いので見やすい。
   - [[Youtube] AIcia Solid Project](https://www.youtube.com/channel/UC2lJYodMaAfFeFQrGUwhlaQ)
@@ -121,7 +121,7 @@ T.B.D.
   - [[Youtube] How to get meaning from text with language model BERT | AI Explained](https://www.youtube.com/watch?v=-9vVhYEXeyQ)
     - Transformerの概要について3Dアニメーションで説明している。
 
-# データ分析コンペサイト
+## データ分析コンペサイト
   - [kaggle](https://www.kaggle.com/)
     - 運営元：Google （米国）
     - 世界最大規模のデータ分析コンペティションプラットフォームである
@@ -144,7 +144,7 @@ T.B.D.
     - 運営元：Analytics Vidhya（インド）
     - 目立った賞金はなく、自分の技術力を試す・学習する・純粋に楽しむためのプラットフォームである
 
-# 気になった論文
+## 気になった論文
   - [Deep Neural Networks and Tabular Data: A Survey](https://arxiv.org/pdf/2110.01889.pdf)
     - XGBoost is All You Need.
   - [State-of-the-Art in the Architecture, Methods and Applications of StyleGAN](https://arxiv.org/abs/2202.14020)
@@ -152,11 +152,11 @@ T.B.D.
   - [A Tutorial on Distance Metric Learning: Mathematical Foundations, Algorithms, Experimental Analysis, Prospects and Challenges (with Appendices on Mathematical Background and Detailed Algorithms Explanation)](https://arxiv.org/abs/1812.05944)
     - metric learningに関するチュートリアル。
 
-# 学会資料
+## 学会資料
   - [2022.2.11 第6回 統計・機械学習若手シンポジウム チュートリアル講演 Vision and LanguageとTransformers](https://speakerdeck.com/sei88888/2022-dot-2-11-di-6hui-tong-ji-ji-jie-xue-xi-ruo-shou-sinpoziumu-tiyutoriarujiang-yan-vision-and-languagetotransformers)
     - Twitterで発見。元ツイは[コレ](https://twitter.com/sei_shinagawa/status/1492682815007502336)
 
-# 気になるライブラリ
+## 気になるライブラリ
   - [NeuralForecast](https://nixtla.github.io/neuralforecast/)
     - Twitterで発見。元ツイは[コレ](https://twitter.com/Rami_Krispin/status/1505898362519777287)
   - [trevismd/statannotations](https://github.com/trevismd/statannotations)
