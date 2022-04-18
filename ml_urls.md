@@ -3,17 +3,27 @@
   - [人工知能と機械学習 - 総務省](https://www.soumu.go.jp/ict_skill/pdf/ict_skill_3_5.pdf)
     - 総務省から出ている機械学習俯瞰用スライド。意外とまとまっているが、文字が多い…
   - [Qiita記事 機械学習超入門](https://qiita.com/ishizakiiii/items/d422019b52d973e0e28d)
-    - 読み物。機械学習のおおざっぱな概要がつかめる。
+    - 読み物。機械学習のおおざっぱな概要が掴める。
   - [Qiita記事 一から始める機械学習（機械学習概要）](https://qiita.com/taki_tflare/items/42a40119d3d8e622edd2)
-    - 読み物。機械学習のおおざっぱな概要がつかめる。
+    - 読み物。機械学習のおおざっぱな概要が掴める。
   - [Qiita記事 10分で分かるAIの歴史](https://qiita.com/cr-fun/items/adf0f7f405eeebc42a50)
 
 ## 機械学習入門
-  - [東工大 機械学習帳](https://chokkan.github.io/mlnote/index.html)
+  - [東工大講義資料 機械学習帳](https://chokkan.github.io/mlnote/index.html)
     - Jupyter Notebook形式で読める、"動く"機械学習帳。機械学習の基礎となる単回帰・重回帰から始まり、理論的な説明と実際のデータを使った確認が同時になされているため、体系的に勉強することができる。（ただし、誤差逆伝播の理論的説明が少ないため、その後の自動微分の話が少し分かりにくい？）
 
+## Python入門
+機械学習の前にPython自体を勉強したい人はこちらを参照。
+  - [東工大講義資料 Python早見帳](https://chokkan.github.io/python/index.html)
+    - Pythonの基礎が一通り素早く習得できる。またコードのJupyter NotebookがGithubに公開されているので、解説を読みながら実際にプログラムを動かすことができる。
+  - [東京大学 数理・情報教育研究センター 『Pythonプログラミング入門』](https://utokyo-ipp.github.io/IPP_textbook.pdf)
+    - 無料で読めるPythonの教科書。318ページあり。体系的にまとまっているので勉強しやすい。2022/04/19現在で最新更新日が2022/04/01なので頻繁にメンテナンスされている模様。また、NumPyやpandas、scikit-learn、matplotlibなどについても解説あり。リンク切れになる前ダウンロード必至！。
+  - [京都大学 プログラミング演習 Python 2021(Version 2021/10/08)](https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/265459/1/Version2021_10_08_01.pdf)
+  - [京都大学 プログラミング演習 Python 2021(Version 2021/10/08 (コラム編))](https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/265459/2/Version2021_10_08_02.pdf)
+    - 上の2つは京大の全学共通科目として実施されているプログラミング演習(Python)の教科書として作成され、無料公開されている。年度により随時更新されていそうなので、常に最新版をチェックしましょう。
+
 ## Neural Network関連
-とりあえず、以下のとてもわかり易い一連のQiita記事を全て読みましょう！
+以下の一連のQiita記事でひとまずNeural Networkの勉強ができそう。
   - [Qiita記事 深層学習入門 \~基礎編\~](https://qiita.com/kuroitu/items/221e8c477ffdd0774b6b)
   - [Qiita記事 深層学習入門 \~コーディング準備編\~](https://qiita.com/kuroitu/items/884c62c48c2daa3def08)
   - [Qiita記事 深層学習入門 \~順伝播編\~](https://qiita.com/kuroitu/items/d22c8750e34d5d75fb6c)
