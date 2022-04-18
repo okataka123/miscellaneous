@@ -17,10 +17,10 @@
   - [東工大講義資料 Python早見帳](https://chokkan.github.io/python/index.html)
     - Pythonの基礎が一通り素早く習得できる。またコードのJupyter NotebookがGithubに公開されているので、解説を読みながら実際にプログラムを動かすことができる。
   - [東京大学 数理・情報教育研究センター 『Pythonプログラミング入門』](https://utokyo-ipp.github.io/IPP_textbook.pdf)
-    - 無料で読めるPythonの教科書。318ページあり。体系的にまとまっているので勉強しやすい。2022/04/19現在で最新更新日が2022/04/01なので頻繁にメンテナンスされている模様。また、NumPyやpandas、scikit-learn、matplotlibなどについても解説あり。リンク切れになる前ダウンロード必至！。
+    - 無料で読めるPythonの教科書。318ページあり。体系的にまとまっているので勉強しやすい。2022/04/19現在で最新更新日が2022/04/01なので頻繁にメンテナンスされている模様。また、NumPyやpandas、scikit-learn、matplotlibなどについても解説あり。リンク切れになる前ダウンロード必至！
   - [京都大学 プログラミング演習 Python 2021(Version 2021/10/08)](https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/265459/1/Version2021_10_08_01.pdf)
   - [京都大学 プログラミング演習 Python 2021(Version 2021/10/08 (コラム編))](https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/265459/2/Version2021_10_08_02.pdf)
-    - 上の2つは京大の全学共通科目として実施されているプログラミング演習(Python)の教科書として作成され、無料公開されている。年度により随時更新されていそうなので、常に最新版をチェックしましょう。
+    - 上の2つは京大の全学共通科目として実施されているプログラミング演習(Python)の教科書であり、無料公開されている。年度により随時更新されていそうなので、常に最新版をチェックしましょう。
 
 ## Neural Network関連
 以下の一連のQiita記事でひとまずNeural Networkの勉強ができそう。
