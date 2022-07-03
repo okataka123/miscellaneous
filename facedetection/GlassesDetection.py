@@ -33,12 +33,13 @@ def is_wearingGlasses1(rgbimg=None, bboxes=None):
 #    path = 'pics/02_bush.jpg'
 #    path = 'pics/03_bush.jpg'
 #    path = 'pics/04_family.jpg'
-    path = 'pics/05_glasses.jpg'
+#    path = 'pics/05_glasses.jpg'
 #    path = 'pics/06_glasses.jpg'
-    rgbimg = dlib.load_rgb_image(path)
+#    rgbimg = dlib.load_rgb_image(path)
 
     for (x, y, w, h) in bboxes:
-        cutted_rgbimg = rgbimg[y:y+h, x:x+w]
+        cutted_rgbimg = rgbimg[y:y+h, x:x+w] # cutすると顔が検知できなくなる。(05の画像の場合)
+        # cutted_rgbimg = rgbimg # cut
 
         if len(detector(cutted_rgbimg))==0:
             print('No face detected')
@@ -64,20 +65,21 @@ def is_wearingGlasses1(rgbimg=None, bboxes=None):
         y_min = landmarks[20][1]
         y_max = landmarks[31][1]
 
-        # ココをRGB対応する必要あり。
-        img2 = Image.open(path)
-        img2 = img2.crop((x_min, y_min, x_max, y_max))
+        cutted_rgbimg2 = Image.fromarray(cutted_rgbimg)
+        cutted_rgbimg2 = cutted_rgbimg2.crop((x_min, y_min, x_max, y_max))
 
-        img_blur = cv2.GaussianBlur(np.array(img2), (3, 3), sigmaX=0, sigmaY=0)
+        img_blur = cv2.GaussianBlur(np.array(cutted_rgbimg2), (3, 3), sigmaX=0, sigmaY=0)
         edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200)
         edges_center = edges.T[(int(len(edges.T)/2))]
 
         if 255 in edges_center:
             print("Glasses are present")
-            return True
+            results.append(True)
         else:
             print("Glasses are absent")
-            return False
+            results.append(False)
+    return results
+
 
 def is_wearingGlasses2(rgbimg=None, bboxes=None):
     """
