@@ -10,7 +10,7 @@ def detectFace1(rgbimg):
     Args:
         rgbimg(numpy.ndarry): rgbdata of one picture.
     Returns:
-        target(list): 
+        bboxes(list): 
     Reference:
         - https://self-development.info/opencv%E3%81%A7%E9%A1%94%E8%AA%8D%E8%AD%98%E3%83%BB%E9%A1%94%E6%A4%9C%E5%87%BA%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E8%A1%8C%E3%81%86%E6%96%B9%E6%B3%95%E3%80%90python%E3%80%91/
         - https://note.nkmk.me/python-opencv-face-detection-haar-cascade/
@@ -20,9 +20,9 @@ def detectFace1(rgbimg):
     XML_PATH = 'haarcascade_frontalface_default.xml'
     classifier = cv2.CascadeClassifier(XML_PATH)
     color = cv2.cvtColor(rgbimg, cv2.COLOR_BGR2GRAY)
-    targets = classifier.detectMultiScale(color, scaleFactor=1.25)
-    #targets = classifier.detectMultiScale(color)
-    return targets
+    bboxes = classifier.detectMultiScale(color, scaleFactor=1.25)
+    #bboxes = classifier.detectMultiScale(color)
+    return bboxes
 
 def detectFace2(rgbimg):
     """
@@ -74,11 +74,11 @@ def main():
 
     # detection
     out_rbgimg = rgbimg.copy()
-    targets = detectFace1(rgbimg)
-    #targets = detectFace2(rgbimg)
+    bboxes = detectFace1(rgbimg)
+    #bboxes = detectFace2(rgbimg)
 
     # show image
-    show_image(out_rbgimg, targets)
+    show_image(out_rbgimg, bboxes)
 
 if __name__ == '__main__':
     main()
