@@ -18,7 +18,7 @@ def detectFace_HaarlikeFeature(rgbimg):
         - https://qiita.com/FukuharaYohei/items/ec6dce7cc5ea21a51a82
           - 動作原理の説明あり
     """
-    XML_PATH = 'haarcascade_frontalface_default.xml'
+    XML_PATH = 'models/haarcascade_frontalface_default.xml'
     classifier = cv2.CascadeClassifier(XML_PATH)
     color = cv2.cvtColor(rgbimg, cv2.COLOR_BGR2GRAY)
     bboxes = classifier.detectMultiScale(color, scaleFactor=1.25)
@@ -38,7 +38,7 @@ def detectFace_ResNet10base(rgbimg):
         https://qiita.com/UnaNancyOwen/items/f3db189760037ec680f3
 
     """
-    model = cv2.dnn_DetectionModel("opencv_face_detector.caffemodel", "opencv_face_detector.prototxt")
+    model = cv2.dnn_DetectionModel("models/opencv_face_detector.caffemodel", "models/opencv_face_detector.prototxt")
     model.setInputSize(300, 300)
     model.setInputMean((104.0, 177.0, 123.0))
     _, _, boxes = model.detect(rgbimg)
@@ -65,15 +65,26 @@ def detectFace4(rgbimg):
     """
     pass
 
-def rotate(rgbimg, theta):
+def rotate(rgbimg, theta, center=None):
     '''
+    rotate the image by the specified angle.
+
     Args:
         rgbimg(numpy.ndarry): rgbdata of one picture.
         thera(int): rotation angle.
+        center(int): center of rotation.
     Returns:
-        rotated_rgbimg(numpy.ndarry): rotated rgbdata
+        rotated_rgbimg(numpy.ndarry): rotated rgbdata.
     '''
-    pass
+    height = rgbimg.shape[0]
+    width = rgbimg.shape[1]
+    out_rgbimg = copy.deepcopy(rgbimg)
+    if center is None:
+        center = (int(width/2), int(height/2))
+    scale = 1.0
+    trans = cv2.getRotationMatrix2D(center, theta, scale)
+    out_rgbimg = cv2.warpAffine(rgbimg, trans, (width, height))
+    return out_rgbimg
 
 def show_image_withbb(rgbimg, bboxes=None):
     if bboxes is not None:
@@ -87,9 +98,6 @@ def show_image_withbb(rgbimg, bboxes=None):
             exit()
 
 def show_image_withbb_nb(rgbimg, bboxes=None):
-    '''
-    '''
-    #out_rgbimg = rgbimg.copy()
     out_rgbimg = copy.deepcopy(rgbimg)
     if bboxes is not None:
         for (x, y, w, h) in bboxes:
@@ -102,8 +110,8 @@ def main():
     parser.add_argument('input_pic', help='specify the filepath of the picture')
     args = parser.parse_args()
     rgbimg = cv2.imread(args.input_pic)
-    bboxes = detectFace1(rgbimg)
-    #bboxes = detectFace2(rgbimg)
+    bboxes = detectFace_HaarlikeFeature(rgbimg)
+    #bboxes = detectFace_ResNet10base(rgbimg)
 
     print('bboxes =', bboxes)
 
