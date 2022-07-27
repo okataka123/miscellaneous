@@ -90,8 +90,47 @@ def detectFace_YuNet(rgbimg):
     Returns:
         bboxes(): sets of bounding box for face regions.
     Reference:
+
+    Note:
+        - 'yunet.onnx' can be downloaded from the following URL.
+          https://github.com/ShiqiYu/libfacedetection.train/blob/a61a428929148171b488f024b5d6774f93cdbc13/tasks/task1/onnx/yunet.onnx
+        - うまく動かない！！
     """
-    pass
+    height, width, _ = rgbimg.shape
+    #model = cv2.FaceDetectorYN.create("models/yunet.onnx", "", (width, height))
+    model = cv2.FaceDetectorYN.create("models/yunet.onnx", "", (0, 0))
+    #model = cv2.FaceDetectorYN.create("models/yunet_yunet_final_640_640_simplify.onnx", "", (0, 0))
+    model.setInputSize((width, height))
+    _, bboxes = model.detect(rgbimg)
+    return bboxes
+
+def detectFace_cnn(rgbimg):
+    """
+    Args:
+        rgbimg(numpy.ndarry): rgbdata of one picture.
+    Returns:
+        bboxes(dlib.mmod_rectangles): sets of bounding box for face regions.
+    Reference:
+    Note:
+        - 'mmod_human_face_detector.dat' is in the following URL.
+          https://github.com/davisking/dlib-models
+    TODO:
+        - CNNってどんなCNNを調べる。
+    """
+    cascade = dlib.cnn_face_detection_model_v1('models/mmod_human_face_detector.dat')
+    bboxes = cascade(rgbimg, 1)
+    return bboxes
+
+def detectFace_template(rgbimg):
+    """
+    Args:
+        rgbimg(numpy.ndarry): rgbdata of one picture.
+    Returns:
+        bboxes(): sets of bounding box for face regions.
+    Reference:
+    Note:
+    """
+    return bboxes
 
 def rotate(rgbimg, theta, center=None):
     '''
@@ -129,6 +168,10 @@ def show_image_withbb_nb(rgbimg, bboxes=None):
     '''
     Jupyter Notebook上でbounding box付きの画像を表示する。
     bboxesがNoneのときは、そのまま画像を表示する。
+
+    Reference:
+        - How to convert mmod_rectangles to rectangles via Dlib?
+          https://stackoverflow.com/questions/56322815/how-to-convert-mmod-rectangles-to-rectangles-via-dlib 
     '''
     out_rgbimg = copy.deepcopy(rgbimg)
     if bboxes is not None:
@@ -141,6 +184,13 @@ def show_image_withbb_nb(rgbimg, bboxes=None):
                 y1 = bbox.top()
                 x2 = bbox.right()
                 y2 = bbox.bottom()
+                cv2.rectangle(out_rgbimg, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        elif type(bboxes) == dlib.mmod_rectangles:
+            for bbox in bboxes:
+                x1 = bbox.rect.left()
+                y1 = bbox.rect.top()
+                x2 = bbox.rect.right()
+                y2 = bbox.rect.bottom()
                 cv2.rectangle(out_rgbimg, (x1, y1), (x2, y2), (0, 255, 0), 2)
     plt.imshow(out_rgbimg)
     plt.show()
