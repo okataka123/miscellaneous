@@ -69,8 +69,19 @@ def detectFace_YOLOv4(rgbimg):
     Returns:
         bboxes(): sets of bounding box for face regions.
     Reference:
+
+    Note:
+        - The size of yolov4.weights is too large, this file is
+          out of control.'yolov4.weights' and 'yolov4.cfg' can be
+          downloarded from the following URL.
+          https://github.com/AlexeyAB/darknet/wiki/YOLOv4-model-zoo
+
+        - This model is not for detection of Face but for person's entire body.
     """
-    pass
+    model = cv2.dnn_DetectionModel("models/yolov4.weights", "models/yolov4.cfg")
+    model.setInputParams(scale=1 / 255, size=(416, 416), swapRB=True)
+    _, _, bboxes = model.detect(rgbimg, confThreshold=0.6, nmsThreshold=0.4)
+    return bboxes
 
 def detectFace_YuNet(rgbimg):
     """
