@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 import cv2
+import dlib
 import copy
 import argparse
+import numpy as np
 import matplotlib.pyplot as plt
 
 def detectFace_HaarlikeFeature(rgbimg):
@@ -11,7 +13,7 @@ def detectFace_HaarlikeFeature(rgbimg):
     Args:
         rgbimg(numpy.ndarry): rgbdata of one picture.
     Returns:
-        bboxes(list): 
+        bboxes(numpy.ndarray): sets of bounding box for face regions.
     Reference:
         - https://self-development.info/opencv%E3%81%A7%E9%A1%94%E8%AA%8D%E8%AD%98%E3%83%BB%E9%A1%94%E6%A4%9C%E5%87%BA%E3%82%92%E7%B0%A1%E5%8D%98%E3%81%AB%E8%A1%8C%E3%81%86%E6%96%B9%E6%B3%95%E3%80%90python%E3%80%91/
         - https://note.nkmk.me/python-opencv-face-detection-haar-cascade/
@@ -25,6 +27,22 @@ def detectFace_HaarlikeFeature(rgbimg):
     #bboxes = classifier.detectMultiScale(color)
     return bboxes
 
+def detectFace_HOGSVM(rgbimg):
+    """
+    HOG特徴量+SVMによる顔検出(dlib)
+
+    Args:
+        rgbimg(numpy.ndarry): rgbdata of one picture.
+    Returns:
+        bboxes(dlib.rectangles): sets of bounding box for face regions.
+    Reference:
+        - https://qiita.com/kotai2003/items/fb1f35da5437eefbc5da
+        - https://iatom.hatenablog.com/entry/2020/11/01/152307
+    """
+    detector = dlib.get_frontal_face_detector()
+    bboxes = detector(rgbimg, 1)
+    return bboxes
+
 def detectFace_ResNet10base(rgbimg):
     """
     ResNet10ベースのSSDモデル(OpenCV Face Detector)による顔検出
@@ -32,7 +50,7 @@ def detectFace_ResNet10base(rgbimg):
     Args:
         rgbimg(numpy.ndarry): rgbdata of one picture.
     Returns:
-        target(list): 
+        bboxes(numpy.ndarray): sets of bounding box for face regions.
     Reference:
         ## https://qiita.com/studio_haneya/items/97560b54b8348db8de87
         https://qiita.com/UnaNancyOwen/items/f3db189760037ec680f3
@@ -41,27 +59,26 @@ def detectFace_ResNet10base(rgbimg):
     model = cv2.dnn_DetectionModel("models/opencv_face_detector.caffemodel", "models/opencv_face_detector.prototxt")
     model.setInputSize(300, 300)
     model.setInputMean((104.0, 177.0, 123.0))
-    _, _, boxes = model.detect(rgbimg)
-    return boxes
+    _, _, bboxes = model.detect(rgbimg)
+    return bboxes
 
 def detectFace_YOLOv4(rgbimg):
     """
     Args:
         rgbimg(numpy.ndarry): rgbdata of one picture.
     Returns:
-        target(list): 
+        bboxes(): sets of bounding box for face regions.
     Reference:
     """
     pass
 
-def detectFace4(rgbimg):
+def detectFace_YuNet(rgbimg):
     """
     Args:
         rgbimg(numpy.ndarry): rgbdata of one picture.
     Returns:
-        target(list): 
+        bboxes(): sets of bounding box for face regions.
     Reference:
-
     """
     pass
 
@@ -98,10 +115,22 @@ def show_image_withbb(rgbimg, bboxes=None):
             exit()
 
 def show_image_withbb_nb(rgbimg, bboxes=None):
+    '''
+    Jupyter Notebook上でbounding box付きの画像を表示する。
+    bboxesがNoneのときは、そのまま画像を表示する。
+    '''
     out_rgbimg = copy.deepcopy(rgbimg)
     if bboxes is not None:
-        for (x, y, w, h) in bboxes:
-           cv2.rectangle(out_rgbimg, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        if type(bboxes) == np.ndarray:
+            for (x, y, w, h) in bboxes:
+                cv2.rectangle(out_rgbimg, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        elif type(bboxes) == dlib.rectangles:
+            for bbox in bboxes:
+                x1 = bbox.left()
+                y1 = bbox.top()
+                x2 = bbox.right()
+                y2 = bbox.bottom()
+                cv2.rectangle(out_rgbimg, (x1, y1), (x2, y2), (0, 255, 0), 2)
     plt.imshow(out_rgbimg)
     plt.show()
 
@@ -112,9 +141,7 @@ def main():
     rgbimg = cv2.imread(args.input_pic)
     bboxes = detectFace_HaarlikeFeature(rgbimg)
     #bboxes = detectFace_ResNet10base(rgbimg)
-
     print('bboxes =', bboxes)
-
 
 if __name__ == '__main__':
     main()

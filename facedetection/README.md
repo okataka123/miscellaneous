@@ -8,10 +8,10 @@
 |No.|model|description|
 |:-|:-|:-|
 |1|haarcascade_frontalface_default.xml|Haar-like特徴量を用いたカスケード型分類器による顔検出。非NN的な手法|
-|2|opencv_face_detector.caffemodel <br> opencv_face_detector.prototxt|ResNet10ベースのSSDモデルを使った顔検出|
-|3|yolov4.cfg <br> yolov4.weights|YOLOv4モデルを使った顔検出|
-|4|yunet.onnx|YuNetによる顔検出|
-|5||HOG特徴量とSVM識別器を用いた顔検出。非NN的な手法|
+|2||HOG特徴量とSVM識別器を用いた顔検出。非NN的な手法|
+|3|opencv_face_detector.caffemodel <br> opencv_face_detector.prototxt|ResNet10ベースのSSDモデルを使った顔検出|
+|4|yolov4.cfg <br> yolov4.weights|YOLOv4モデルを使った顔検出|
+|5|yunet.onnx|YuNetによる顔検出|
 |6||CNN|
 |7||MTCNN|
 
@@ -47,7 +47,9 @@
       - MTCNN（Multi-task Cascaded Convolutional Neural Networks for Face Detection）
     - また、上記2つのリンクのうち下側では、これら4種類のモデルで顔画像を回転させたときの検出精度も比較している。
 
-
   - [OpenCV Haar-Cascadeによる顔検出](https://qiita.com/tnoce/items/c819c85a85c16d246be8)
 
-  - []()
+  - [[OpenCV+dlib] 顔認識の実験](https://qiita.com/kotai2003/items/fb1f35da5437eefbc5da)
+    - dlibのライブラリを
+
+  - [調和技研 技術ブログ OpenCVとdlibの顔検出機能の比較](https://blog.chowagiken.co.jp/entry/2019/06/28/OpenCV%E3%81%A8dlib%E3%81%AE%E9%A1%94%E6%A4%9C%E5%87%BA%E6%A9%9F%E8%83%BD%E3%81%AE%E6%AF%94%E8%BC%83)
