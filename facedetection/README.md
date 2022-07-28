@@ -5,15 +5,15 @@
 ## models
 以下の表に検証model一覧を示す。
 
-|No.|Model|Description|Remarks|
+|No.|Pretrained-model|Description|Remarks|
 |:-|:-|:-|:-|
 |1|haarcascade_frontalface_default.xml|Haar-like特徴量を用いたカスケード型分類器による顔検出。非NN的な手法|-|
 |2|-|HOG徴量とSVM識別器を用いた顔検出。非NN的な手法|-|
 |3|opencv_face_detector.caffemodel <br> opencv_face_detector.prototxt|ResNet10ベースのSSDモデルを使った顔検出|-|
 |4|yolov4.cfg <br> yolov4.weights|YOLOv4モデルを使った身体検出|顔検出モデルではなくて人物を身体ごと検出するモデル|
 |5|yunet.onnx|YuNetによる顔検出|<font color=red>うまく動かない</font>|
-|6|mmod_human_face_detector.dat|CNN||
-|7||MTCNN||
+|6|mmod_human_face_detector.dat|CNN|-|
+|7|-|MTCNN|tensorflow 2.0がimportできる環境が必要|
 
 ## 検証データについて
 適当にWeb上で拾ってきた顔画像を検証用データとして用いる。またそれぞれの画像に対して、±15°、±30°、±45°、±60°、±90°に回転した画像も顔検出を試す。
