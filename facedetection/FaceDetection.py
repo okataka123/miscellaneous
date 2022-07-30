@@ -193,7 +193,7 @@ def show_image_withbb_nb(rgbimg, bboxes=None):
     '''
     out_rgbimg = copy.deepcopy(rgbimg)
     if bboxes is not None:
-        if type(bboxes) == np.ndarray:
+        if (type(bboxes) == np.ndarray) or (type(bboxes) == list):
             for (x, y, w, h) in bboxes:
                 cv2.rectangle(out_rgbimg, (x, y), (x+w, y+h), (0, 255, 0), 2)
         elif type(bboxes) == dlib.rectangles:
@@ -209,13 +209,6 @@ def show_image_withbb_nb(rgbimg, bboxes=None):
                 y1 = bbox.rect.top()
                 x2 = bbox.rect.right()
                 y2 = bbox.rect.bottom()
-                cv2.rectangle(out_rgbimg, (x1, y1), (x2, y2), (0, 255, 0), 2)
-        elif type(bboxes) == list:
-            for bbox in bboxes:
-                x1 = bbox[0]
-                y1 = bbox[1]
-                x2 = bbox[0] + bbox[2]
-                y2 = bbox[1] + bbox[3]
                 cv2.rectangle(out_rgbimg, (x1, y1), (x2, y2), (0, 255, 0), 2)
     plt.imshow(out_rgbimg)
     plt.show()
