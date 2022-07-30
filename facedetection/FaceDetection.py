@@ -182,11 +182,8 @@ def show_image_withbb(rgbimg, bboxes=None):
             cv2.destroyAllWindows()
             exit()
 
-def show_image_withbb_nb(rgbimg, bboxes=None):
+def get_image_withbb(rgbimg, bboxes=None):
     '''
-    Jupyter Notebook上でbounding box付きの画像を表示する。
-    bboxesがNoneのときは、そのまま画像を表示する。
-
     Reference:
         - How to convert mmod_rectangles to rectangles via Dlib?
           https://stackoverflow.com/questions/56322815/how-to-convert-mmod-rectangles-to-rectangles-via-dlib 
@@ -210,7 +207,15 @@ def show_image_withbb_nb(rgbimg, bboxes=None):
                 x2 = bbox.rect.right()
                 y2 = bbox.rect.bottom()
                 cv2.rectangle(out_rgbimg, (x1, y1), (x2, y2), (0, 255, 0), 2)
-    plt.imshow(out_rgbimg)
+    return out_rgbimg
+
+def show_image_nb(rgbimg):
+    '''
+    Jupyter Notebook上でbounding box付きの画像を表示する。
+    bboxesがNoneのときは、そのまま画像を表示する。
+
+    '''
+    plt.imshow(rgbimg)
     plt.show()
 
 def main():
