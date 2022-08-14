@@ -1,0 +1,21 @@
+# PyTorch memo
+## About torchvision
+  - [PyTorchでオートエンコーダーによる画像生成をしてみよう](https://atmarkit.itmedia.co.jp/ait/articles/2007/10/news024_2.html)
+    - PyTorchでAutoEncoderの書き方が書かれている。NNモデルの作り方だけでなく、データローダーの書き方、trainの書き方なども参考になる。
+  - [ディープラーニングの基礎（PyTorch）](https://free.kikagaku.ai/tutorial/basic_of_deep_learning/learn/pytorch_beginners)
+    - torch.nn.Linear()について。 
+  - [【PyTorch】torchvision.transformsを使って、学習時のデータ拡張(Data Augmentation)を行う ](https://take-tech-engineer.com/pytorch-data-augmentation-transforms/)
+    - torchvision.transformsの使い方について説明している。torchvision.transformsは画像に対して様々な変換を施すことができる。また、それらの変換たちをComposeしてpipelineを作ることもできる。
+  - [Qiita記事 \[PyTorch\]ToTensor()はどのように動いているんだろう](https://qiita.com/Haaamaaaaa/items/925257c0c8f1b115575a)
+    - `torchvision.transforms.ToTensor()`の役割について説明している。結論としては、まず画像データをTensor型に型変換と、ピクセル値に関して[0, 255]を[0, 1.0]に正規化している。(同時に、データの型もuint8からfloat32に変化する。) ちなみに、`torchvision.transforms.Normalizer()`の方も正規化するために使うが、こっちは指定したmeanとstdになるように正規化する。
+  - [teratail PyTorch における正規化について](https://teratail.com/questions/295871)
+    - `torchvision.transforms.Normalize()`を使うときによく出てくる`mean = [0.485, 0.456, 0.406],std=[0.229, 0.224, 0.225]`の意味について。結論として、これはImageNetのRGBの平均と標準偏差を表している。
+  - [Qiita記事 PytorchのDataloaderとSamplerの使い方](https://qiita.com/tomp/items/3bf6d040bbc89a171880)
+    - torch.utils.data.DataLoaderの使い方についてまとめられている。データセットからデータをバッチごとに取り出したりできる。
+  - [Qiita記事 PyTorchでMNIST](https://qiita.com/fukuit/items/215ef75113d97560e599)
+  - [Pytorch – torchvision の make_grid で複数の画像を並べて表示する方法](https://pystyle.info/pytorch-make-grid/)
+    - torchvision.utils.make_gridについての説明。torchvision.utils.make_grid()を使うことによって、複数の画像をグリッド上に並べた画像を作ることができる。
+  - [わかりやすいPyTorch入門⑤（CNNとデータの拡張）](https://exture-ri.com/2021/01/11/cnn-cifar10/)
+  - [【pytorch-lightning入門】torchvision.transformsの使い方と自前datasetの自由な作り方♬](https://qiita.com/MuAuan/items/c350f64b7abb396973ed)
+  - []()
+    - 
